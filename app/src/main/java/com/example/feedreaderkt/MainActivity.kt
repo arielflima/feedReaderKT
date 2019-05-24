@@ -20,9 +20,9 @@ class MainActivity : AppCompatActivity(), Callback {
     }
 
     override fun onLoaded(newArticles: MutableList<Article>?) {
-       newArticles?.mapTo(listItems){
-           Item( it.title, it.author, it.date, it.source, it.enclosure.url )
-       }
+        newArticles?.mapTo(listItems) {
+            Item(it.title, it.author, it.date, it.source, it.enclosure.url)
+        }
     }
 
     data class Item(val titulo: String, val autor: String, val data: Long, val link: Uri, val image: String)
