@@ -25,6 +25,7 @@ class ItemAdapter(val list: ArrayList<MainActivity.Item>, val context: Context) 
             val intent = Intent(Intent.ACTION_VIEW, list[p1].link)
             context.startActivity(intent)
         }
+        DownloadImageTask(p0?.imagem!!).execute(list[p1].image)
     }
 
     class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
